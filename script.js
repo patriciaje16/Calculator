@@ -15,6 +15,35 @@ const displayArea = document.querySelector('calcDisplay')
 
 
 
+//to get the number keys to add onto display
+numberButton.forEach(button => {
+  button.addEventListener('click', () => {
+    console.log("it works")
+
+  })
+})
+
+//get equals button to work
+equalsButton.addEventListener('click', () => {
+    console.log("it works")
+
+  })
+
+//get operation buttons to work
+operationButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    console.log("it works")
+
+  })
+
+})
+
+//get delete button to work
+
+deleteButton.addEventListener('click', () => {
+  console.log("it works")
+
+})
 
 
 
