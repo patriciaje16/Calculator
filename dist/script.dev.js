@@ -49,5 +49,7 @@ operationButtons.forEach(function (button) {
     displayArea.innerHTML += e.target.innerHTML;
   });
 }); //get delete button to work 
-// deleteButton.addEventListener('click', (e) => {
-// const deleted =
+
+deleteButton.addEventListener('click', function (e) {
+  displayArea.innerHTML = ' ';
+});
