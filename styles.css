@@ -1,21 +1,111 @@
-.calcKeys {
+.container {
+  max-width: 50%;
+  background-color: black;
+}
+.container #calcDisplay {
+  width: 40%;
+  height: 5vh;
+  color: white;
+  float: right;
+}
+.container .calcKeys {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 80%;
+  margin: auto;
+  align-content: space-around;
+  grid-gap: 1px;
 }
-
-#zero {
+.container .calcKeys button {
+  border-radius: 100px;
+  height: 6vh;
+  width: 6vh;
+}
+.container #zero {
   grid-area: zero;
 }
-
-#point {
+.container #point {
   grid-area: point;
+}
+.container #equals {
+  grid-area: equals;
+}
+.container .bottomKeys {
+  display: grid;
+  grid-template-areas: "zero zero point equals";
+  width: 80%;
+  padding-top: 1vh;
+  padding-bottom: 10vh;
+  margin: auto;
+  grid-gap: 1px;
+}
+.container .bottomKeys button {
+  border-radius: 100px;
+  height: 5vh;
+}
+.container .bottomKeys #zero {
+  width: 15vh;
+}
+.container .bottomKeys #point {
+  width: 5vh;
+}
+.container .bottomKeys #equals {
+  width: 5vh;
+}
+
+#c {
+  background-color: gray;
+  border-style: none;
+}
+
+#plusMinus {
+  background-color: gray;
+  border-style: none;
+}
+
+#percentage {
+  background-color: gray;
+  border-style: none;
+}
+
+[data-number] {
+  background-color: rgba(78, 83, 88, 0.39);
+  border-style: none;
+  color: white;
+  font-size: medium;
+}
+
+#divide {
+  background-color: #da9020;
+  border-style: none;
+  color: white;
+  font-size: larger;
+}
+
+#plus {
+  background-color: #da9020;
+  border-style: none;
+  color: white;
+  font-size: larger;
+}
+
+#minus {
+  background-color: #da9020;
+  border-style: none;
+  color: white;
+  font-size: larger;
+}
+
+#multiply {
+  background-color: #da9020;
+  border-style: none;
+  color: white;
+  font-size: larger;
 }
 
 #equals {
-  grid-area: equals;
-}
-
-.bottomKeys {
-  display: grid;
-  grid-template-areas: "zero zero point equals";
+  background-color: #da9020;
+  border-style: none;
+  color: white;
+  font-size: larger;
 }
