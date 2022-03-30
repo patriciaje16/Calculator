@@ -1,3 +1,7 @@
+
+///////////need to take into consideration the decimal point, the +/-, the %, and it won't take more than one number unless it fits in the parameters ive put. 
+
+
 ///number buttons
 const numberButton = document.querySelectorAll('[data-number]')
 console.log(numberButton)
@@ -14,6 +18,15 @@ const deleteButton = document.querySelector('[data-delete]')
 ///display area
 const displayArea = document.querySelector('#calcDisplay')
 
+//decimal point
+const decimalButton = document.querySelector('[data-decimal]')
+
+//percentage sign//
+const percentButton = document.querySelector('[data-percent]')
+
+
+
+
 
 
 
@@ -27,11 +40,14 @@ numberButton.forEach(button => {
   })
 })
 
+
 //get equals button to work
 equalsButton.addEventListener('click', (e) => {
+  
     
     const arrayToCalculate = displayArea.innerHTML.split('')
-    if (arrayToCalculate[1] === '+' ) {
+    
+  if (arrayToCalculate[1] === '+' ) {
       const result = parseInt(arrayToCalculate[0]) + parseInt(arrayToCalculate[2]) 
       displayArea.innerHTML = result
     } else if (arrayToCalculate[1] === '-') {
@@ -50,6 +66,8 @@ equalsButton.addEventListener('click', (e) => {
 
   })
 
+  
+
 //get operation buttons to work
 operationButtons.forEach(button => {
   button.addEventListener('click', (e) => {
@@ -66,8 +84,9 @@ deleteButton.addEventListener('click', (e) => {
    displayArea.innerHTML = ' ';
 });
 
- 
- 
 
 
+////percent button////
+percentButton.addEventListener('click', () => {
 
+})
