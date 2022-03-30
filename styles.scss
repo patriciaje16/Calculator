@@ -1,6 +1,7 @@
 .calcKeys {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+
 }
 
 #zero {
@@ -17,5 +18,6 @@
 
 .bottomKeys {
   display: grid;
-  grid-template-areas: "zero zero point equals";
+  grid-template-areas:
+  "zero zero point equals";
 }
