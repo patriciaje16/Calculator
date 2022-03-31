@@ -24,11 +24,8 @@ const decimalButton = document.querySelector('[data-decimal]')
 //percentage sign//
 const percentButton = document.querySelector('[data-percent]')
 
-
-
-
-
-
+let firstNumber = 0
+let secondNumber = 0
 
 
 //to get the number keys to add onto display
@@ -48,19 +45,19 @@ equalsButton.addEventListener('click', (e) => {
     const arrayToCalculate = displayArea.innerHTML.split('')
     
   if (arrayToCalculate[1] === '+' ) {
-      const result = parseInt(arrayToCalculate[0]) + parseInt(arrayToCalculate[2]) 
+      const result = parseInt(firstNumber) + parseInt(arrayToCalculate[2]) 
       displayArea.innerHTML = result
     } else if (arrayToCalculate[1] === '-') {
-      const result = parseInt(arrayToCalculate[0]) - parseInt(arrayToCalculate[2]) 
+      const result = parseInt(firstNumber) - parseInt(arrayToCalculate[2]) 
       displayArea.innerHTML = result
     }else if (arrayToCalculate[1] === '÷') {
-      const result = parseInt(arrayToCalculate[0]) / parseInt(arrayToCalculate[2]) 
+      const result = parseInt(firstNumber) / parseInt(arrayToCalculate[2]) 
       displayArea.innerHTML = result
     }else if (arrayToCalculate[1] === '*') {
-      const result = parseInt(arrayToCalculate[0]) * parseInt(arrayToCalculate[2]) 
+      const result = parseInt(firstNumber) * parseInt(arrayToCalculate[2]) 
       displayArea.innerHTML = result
     }else if (arrayToCalculate[1] === 'x') {
-      const result = parseInt(arrayToCalculate[0]) * parseInt(arrayToCalculate[2]) 
+      const result = parseInt(firstNumber) * parseInt(arrayToCalculate[2]) 
       displayArea.innerHTML = result
     }
 
@@ -71,6 +68,10 @@ equalsButton.addEventListener('click', (e) => {
 //get operation buttons to work
 operationButtons.forEach(button => {
   button.addEventListener('click', (e) => {
+    firstNumber = displayArea.innerHTML
+    
+     console.log(firstNumber)
+    
     displayArea.innerHTML += e.target.innerHTML
   
 
@@ -86,7 +87,4 @@ deleteButton.addEventListener('click', (e) => {
 
 
 
-////percent button////
-percentButton.addEventListener('click', () => {
-
-})
+ 
