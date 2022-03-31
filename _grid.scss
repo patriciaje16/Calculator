@@ -1,0 +1,77 @@
+.container {
+  max-width: 300px;
+  min-width: 300px;
+ 
+ ///display area
+ #calcDisplay {
+   width: 40%;
+   height: 5vh;
+   
+   float: right;
+   
+ }
+ 
+ ////the main keys
+ .calcKeys {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   width: 80%;
+   margin: auto;
+   align-content: space-around;
+   grid-gap: 1px;
+   button {
+     border-radius: 100px;
+      height: 6vh;
+      width: 6vh;
+      
+   }
+ 
+ }
+ ////grid variables
+ #zero {
+   grid-area: zero;
+   
+ }
+ 
+ #point {
+   grid-area: point;
+   
+ }
+ 
+ #equals {
+   grid-area: equals;
+   
+ }
+ 
+ 
+ ///the bottom keys 
+ .bottomKeys {
+   display: grid;
+   grid-template-areas:
+   "zero zero point equals";
+   width: 80%;
+   padding-top: 1vh;
+   padding-bottom: 10vh; 
+   margin: auto;
+   grid-gap: 1px;
+ 
+    button {
+      border-radius: 100px;
+      height: 5vh;
+    }
+      #zero {
+        width: 15vh;
+      }
+      #point {
+        width: 5vh;
+         
+    }
+    #equals {
+      width: 5vh;
+    }
+ }
+ }
+ 
+
+ 
+ 

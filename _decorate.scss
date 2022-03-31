@@ -1,0 +1,97 @@
+.container {
+   background-color: black;
+ 
+ ///display area
+ #calcDisplay {
+   
+   color: white;
+   
+   font-size: 45px;
+   padding-bottom: 5vh;
+ }
+ 
+ ////the main keys
+ 
+   
+   button {
+     
+      font-size: 30px;
+   }
+ 
+ 
+ ////variables
+ #zero {
+   
+   font-size: 30px;
+ }
+ 
+ #point {
+   
+   font-size: 30px
+ }
+ 
+ #equals {
+   
+   font-size: 30px;
+ }
+ 
+ #c {
+   background-color: gray;
+   border-style: none;
+ }
+ 
+ #plusMinus {
+   background-color: gray;
+   border-style: none;
+ }
+ 
+ #percentage {
+   background-color: gray;
+   border-style: none;
+ }
+ ////numbers decoration
+ [data-number] {
+   background-color: rgba(78, 83, 88, 0.39);
+   border-style: none;
+   color: white;
+   font-size: 30px;
+ }
+ 
+ 
+ ///operation decoration 
+ 
+ #divide {
+   background-color:rgb(218, 144, 32);
+   border-style: none;
+   color: white;
+   font-size: 30px;
+ }
+ 
+ #plus {
+   background-color:rgb(218, 144, 32);
+   border-style: none;
+   color: white;
+   font-size: 30px;
+ }
+ 
+ #minus {
+   background-color:rgb(218, 144, 32);
+   border-style: none;
+   color: white;
+   font-size: 30px;
+ }
+ 
+ #multiply {
+   background-color:rgb(218, 144, 32);
+   border-style: none;
+   color: white;
+   font-size: 30px;
+ }
+ 
+ #equals {
+   background-color:rgb(218, 144, 32);
+   border-style: none;
+   color: white;
+   font-size: larger;
+ }
+}

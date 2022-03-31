@@ -1,15 +1,11 @@
 .container {
   max-width: 300px;
   min-width: 300px;
-  background-color: black;
 }
 .container #calcDisplay {
   width: 40%;
   height: 5vh;
-  color: white;
   float: right;
-  font-size: 45px;
-  padding-bottom: 5vh;
 }
 .container .calcKeys {
   display: grid;
@@ -23,15 +19,12 @@
   border-radius: 100px;
   height: 6vh;
   width: 6vh;
-  font-size: 30px;
 }
 .container #zero {
   grid-area: zero;
-  font-size: 30px;
 }
 .container #point {
   grid-area: point;
-  font-size: 30px;
 }
 .container #equals {
   grid-area: equals;
@@ -59,57 +52,69 @@
   width: 5vh;
 }
 
-#c {
+.container {
+  background-color: black;
+}
+.container #calcDisplay {
+  color: white;
+  font-size: 45px;
+  padding-bottom: 5vh;
+}
+.container button {
+  font-size: 30px;
+}
+.container #zero {
+  font-size: 30px;
+}
+.container #point {
+  font-size: 30px;
+}
+.container #equals {
+  font-size: 30px;
+}
+.container #c {
   background-color: gray;
   border-style: none;
 }
-
-#plusMinus {
+.container #plusMinus {
   background-color: gray;
   border-style: none;
 }
-
-#percentage {
+.container #percentage {
   background-color: gray;
   border-style: none;
 }
-
-[data-number] {
+.container [data-number] {
   background-color: rgba(78, 83, 88, 0.39);
   border-style: none;
   color: white;
-  font-size: medium;
+  font-size: 30px;
 }
-
-#divide {
+.container #divide {
   background-color: #da9020;
   border-style: none;
   color: white;
-  font-size: larger;
+  font-size: 30px;
 }
-
-#plus {
+.container #plus {
   background-color: #da9020;
   border-style: none;
   color: white;
-  font-size: larger;
+  font-size: 30px;
 }
-
-#minus {
+.container #minus {
   background-color: #da9020;
   border-style: none;
   color: white;
-  font-size: larger;
+  font-size: 30px;
 }
-
-#multiply {
+.container #multiply {
   background-color: #da9020;
   border-style: none;
   color: white;
-  font-size: larger;
+  font-size: 30px;
 }
-
-#equals {
+.container #equals {
   background-color: #da9020;
   border-style: none;
   color: white;
