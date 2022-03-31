@@ -1,4 +1,4 @@
-
+////factor in the decimal point 
 
 let firstNumber = 0
 
@@ -19,16 +19,22 @@ const deleteButton = document.querySelector('[data-delete]')
 const displayArea = document.querySelector('#calcDisplay')
 
 //decimal point
-const decimalButton = document.querySelector('[data-decimal]')
+const decimalButton = document.querySelector('#point')
 
 //percentage sign//
 const percentButton = document.querySelector('[data-percent]')
 
+percentButton.addEventListener('click', () => {
+  const number = displayArea.innerHTML/100
+  displayArea.innerHTML = number 
+
+
+})
+
+
 ///plus minus sign
 const plusMinus = document.querySelector('#plusMinus')
 
-
-///check first thing in displayArea.innerhtml if it is a minus then delete it...if its not a minus then add a minus to the start..if else inside event listener..
 plusMinus.addEventListener('click', () => {
   if (displayArea.innerHTML.startsWith('-')) {
 

@@ -1,5 +1,6 @@
 "use strict";
 
+////factor in the decimal point 
 var firstNumber = 0; ///number buttons
 
 var numberButton = document.querySelectorAll('[data-number]');
@@ -14,12 +15,15 @@ var deleteButton = document.querySelector('[data-delete]'); ///display area
 
 var displayArea = document.querySelector('#calcDisplay'); //decimal point
 
-var decimalButton = document.querySelector('[data-decimal]'); //percentage sign//
+var decimalButton = document.querySelector('#point'); //percentage sign//
 
-var percentButton = document.querySelector('[data-percent]'); ///plus minus sign
+var percentButton = document.querySelector('[data-percent]');
+percentButton.addEventListener('click', function () {
+  var number = displayArea.innerHTML / 100;
+  displayArea.innerHTML = number;
+}); ///plus minus sign
 
-var plusMinus = document.querySelector('#plusMinus'); ///check first thing in displayArea.innerhtml if it is a minus then delete it...if its not a minus then add a minus to the start..if else inside event listener..
-
+var plusMinus = document.querySelector('#plusMinus');
 plusMinus.addEventListener('click', function () {
   if (displayArea.innerHTML.startsWith('-')) {
     var newNumber = displayArea.innerHTML.substring(1);
