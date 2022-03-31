@@ -1,6 +1,6 @@
 .container {
-  max-width: 30%;
-  min-width: 40%;
+  max-width: 300px;
+  min-width: 300px;
   background-color: black;
 }
 .container #calcDisplay {
@@ -8,6 +8,8 @@
   height: 5vh;
   color: white;
   float: right;
+  font-size: 45px;
+  padding-bottom: 5vh;
 }
 .container .calcKeys {
   display: grid;
@@ -21,12 +23,15 @@
   border-radius: 100px;
   height: 6vh;
   width: 6vh;
+  font-size: 30px;
 }
 .container #zero {
   grid-area: zero;
+  font-size: 30px;
 }
 .container #point {
   grid-area: point;
+  font-size: 30px;
 }
 .container #equals {
   grid-area: equals;

@@ -3,8 +3,8 @@
 // @import '_decorate.scss';
 
 .container {
- max-width: 30%;
- min-width: 40%;
+ max-width: 300px;
+ min-width: 300px;
   background-color: black;
 
 ///display area
@@ -13,6 +13,8 @@
   height: 5vh;
   color: white;
   float: right;
+  font-size: 45px;
+  padding-bottom: 5vh;
 }
 
 ////the main keys
@@ -27,16 +29,19 @@
     border-radius: 100px;
      height: 6vh;
      width: 6vh;
+     font-size: 30px;
   }
 
 }
 ////grid variables
 #zero {
   grid-area: zero;
+  font-size: 30px;
 }
 
 #point {
   grid-area: point;
+  font-size: 30px
 }
 
 #equals {
