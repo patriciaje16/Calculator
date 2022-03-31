@@ -1,6 +1,6 @@
 
-///////////need to take into consideration the decimal point, the +/-, the %, and it won't take more than one number unless it fits in the parameters ive put. 
 
+let firstNumber = 0
 
 ///number buttons
 const numberButton = document.querySelectorAll('[data-number]')
@@ -24,8 +24,10 @@ const decimalButton = document.querySelector('[data-decimal]')
 //percentage sign//
 const percentButton = document.querySelector('[data-percent]')
 
-let firstNumber = 0
-let secondNumber = 0
+///check first thing in displayArea.innerhtml if it is a minus then delete it...if its not a minus then add a minus to the start..if else inside event listener..
+
+
+
 
 
 //to get the number keys to add onto display
@@ -37,27 +39,39 @@ numberButton.forEach(button => {
   })
 })
 
+const operators = ["+", "-", "÷", "x"]
+
 
 //get equals button to work
 equalsButton.addEventListener('click', (e) => {
   
-    
-    const arrayToCalculate = displayArea.innerHTML.split('')
-    
-  if (arrayToCalculate[1] === '+' ) {
-      const result = parseInt(firstNumber) + parseInt(arrayToCalculate[2]) 
+  let currentOperator = ""
+
+
+
+
+    operators.forEach( (operator) => {
+      if (displayArea.innerHTML.includes(operator)) {
+        currentOperator = operator
+      }
+    })
+
+
+
+    const arrayToCalculate = displayArea.innerHTML.split(currentOperator)
+    console.log(arrayToCalculate)
+
+  if (currentOperator === '+' ) {
+      const result = parseInt(firstNumber) + parseInt(arrayToCalculate[1]) 
       displayArea.innerHTML = result
-    } else if (arrayToCalculate[1] === '-') {
-      const result = parseInt(firstNumber) - parseInt(arrayToCalculate[2]) 
+    } else if (currentOperator === '-') {
+      const result = parseInt(firstNumber) - parseInt(arrayToCalculate[1]) 
       displayArea.innerHTML = result
-    }else if (arrayToCalculate[1] === '÷') {
-      const result = parseInt(firstNumber) / parseInt(arrayToCalculate[2]) 
+    }else if (currentOperator === '÷') {
+      const result = parseInt(firstNumber) / parseInt(arrayToCalculate[1]) 
       displayArea.innerHTML = result
-    }else if (arrayToCalculate[1] === '*') {
-      const result = parseInt(firstNumber) * parseInt(arrayToCalculate[2]) 
-      displayArea.innerHTML = result
-    }else if (arrayToCalculate[1] === 'x') {
-      const result = parseInt(firstNumber) * parseInt(arrayToCalculate[2]) 
+    }else if (currentOperator === 'x') {
+      const result = parseInt(firstNumber) * parseInt(arrayToCalculate[1]) 
       displayArea.innerHTML = result
     }
 
