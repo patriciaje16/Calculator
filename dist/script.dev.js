@@ -16,8 +16,22 @@ var displayArea = document.querySelector('#calcDisplay'); //decimal point
 
 var decimalButton = document.querySelector('[data-decimal]'); //percentage sign//
 
-var percentButton = document.querySelector('[data-percent]'); ///check first thing in displayArea.innerhtml if it is a minus then delete it...if its not a minus then add a minus to the start..if else inside event listener..
-//to get the number keys to add onto display
+var percentButton = document.querySelector('[data-percent]'); ///plus minus sign
+
+var plusMinus = document.querySelector('#plusMinus'); ///check first thing in displayArea.innerhtml if it is a minus then delete it...if its not a minus then add a minus to the start..if else inside event listener..
+
+plusMinus.addEventListener('click', function () {
+  if (displayArea.innerHTML.startsWith('-')) {
+    var newNumber = displayArea.innerHTML.substring(1);
+    displayArea.innerHTML = newNumber;
+  } else if (displayArea.innerHTML != '' && displayArea.innerHTML != '0') {
+    console.log(displayArea.innerHTML);
+
+    var _newNumber = "-" + displayArea.innerHTML;
+
+    displayArea.innerHTML = _newNumber;
+  }
+}); //to get the number keys to add onto display
 
 numberButton.forEach(function (button) {
   button.addEventListener('click', function (e) {

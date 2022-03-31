@@ -24,8 +24,24 @@ const decimalButton = document.querySelector('[data-decimal]')
 //percentage sign//
 const percentButton = document.querySelector('[data-percent]')
 
-///check first thing in displayArea.innerhtml if it is a minus then delete it...if its not a minus then add a minus to the start..if else inside event listener..
+///plus minus sign
+const plusMinus = document.querySelector('#plusMinus')
 
+
+///check first thing in displayArea.innerhtml if it is a minus then delete it...if its not a minus then add a minus to the start..if else inside event listener..
+plusMinus.addEventListener('click', () => {
+  if (displayArea.innerHTML.startsWith('-')) {
+
+   const newNumber = displayArea.innerHTML.substring(1)
+   displayArea.innerHTML = newNumber
+  } else if (displayArea.innerHTML != '' && displayArea.innerHTML !='0') {
+   console.log(displayArea.innerHTML)
+   const newNumber = "-" + displayArea.innerHTML
+   displayArea.innerHTML = newNumber
+   
+  }
+  
+})
 
 
 
