@@ -1,5 +1,5 @@
 .container {
-  max-width: 300px;
+  max-width: 400px;
   min-width: 300px;
 }
 .container #calcDisplay {
@@ -12,7 +12,6 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   width: 80%;
   margin: auto;
-  align-content: space-around;
   grid-gap: 1px;
 }
 .container .calcKeys button {
@@ -61,7 +60,7 @@
   padding-bottom: 5vh;
 }
 .container button {
-  font-size: 30px;
+  font-size: 20px;
 }
 .container #zero {
   font-size: 30px;

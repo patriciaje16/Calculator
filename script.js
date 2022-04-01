@@ -21,6 +21,10 @@ const displayArea = document.querySelector('#calcDisplay')
 //decimal point
 const decimalButton = document.querySelector('#point')
 
+
+
+
+
 //percentage sign//
 const percentButton = document.querySelector('[data-percent]')
 
