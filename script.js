@@ -21,19 +21,13 @@ const displayArea = document.querySelector('#calcDisplay')
 //decimal point
 const decimalButton = document.querySelector('#point')
 
-decimalButton.addEventListener('click', (e) => {
-  if (!(displayArea.innerHTML.includes('.'))) {
-    decimalButton.disabled = true;}
-  
-
-  })
 
 //percentage sign//
 const percentButton = document.querySelector('[data-percent]')
 
 percentButton.addEventListener('click', () => {
-  const number = displayArea.innerHTML/100
-  displayArea.innerHTML = number 
+  const number = displayArea.innerHTML / 100
+  displayArea.innerHTML = number
 
 
 })
@@ -45,15 +39,15 @@ const plusMinus = document.querySelector('#plusMinus')
 plusMinus.addEventListener('click', () => {
   if (displayArea.innerHTML.startsWith('-')) {
 
-   const newNumber = displayArea.innerHTML.substring(1)
-   displayArea.innerHTML = newNumber
-  } else if (displayArea.innerHTML != '' && displayArea.innerHTML !='0') {
-   console.log(displayArea.innerHTML)
-   const newNumber = "-" + displayArea.innerHTML
-   displayArea.innerHTML = newNumber
-   
+    const newNumber = displayArea.innerHTML.substring(1)
+    displayArea.innerHTML = newNumber
+  } else if (displayArea.innerHTML != '' && displayArea.innerHTML != '0') {
+    console.log(displayArea.innerHTML)
+    const newNumber = "-" + displayArea.innerHTML
+    displayArea.innerHTML = newNumber
+
   }
-  
+
 })
 
 
@@ -62,9 +56,10 @@ plusMinus.addEventListener('click', () => {
 //to get the number keys to add onto display
 numberButton.forEach(button => {
   button.addEventListener('click', (e) => {
-   displayArea.innerHTML += e.target.innerHTML
 
-  
+    displayArea.innerHTML += e.target.innerHTML
+
+    
   })
 })
 
@@ -73,50 +68,50 @@ const operators = ["+", "-", "÷", "x"]
 
 //get equals button to work
 equalsButton.addEventListener('click', (e) => {
-  
+
   let currentOperator = ""
 
 
 
 
-    operators.forEach( (operator) => {
-      if (displayArea.innerHTML.includes(operator)) {
-        currentOperator = operator
-      }
-    })
-
-
-
-    const arrayToCalculate = displayArea.innerHTML.split(currentOperator)
-    console.log(arrayToCalculate)
-
-  if (currentOperator === '+' ) {
-      const result = parseFloat(firstNumber) + parseFloat(arrayToCalculate[1]) 
-      displayArea.innerHTML = result
-    } else if (currentOperator === '-') {
-      const result = parseFloat(firstNumber) - parseFloat(arrayToCalculate[1]) 
-      displayArea.innerHTML = result
-    }else if (currentOperator === '÷') {
-      const result = parseFloat(firstNumber) / parseFloat(arrayToCalculate[1]) 
-      displayArea.innerHTML = result
-    }else if (currentOperator === 'x') {
-      const result = parseFloat(firstNumber) * parseFloat(arrayToCalculate[1]) 
-      displayArea.innerHTML = result
+  operators.forEach((operator) => {
+    if (displayArea.innerHTML.includes(operator)) {
+      currentOperator = operator
     }
-
   })
 
-  
+
+
+  const arrayToCalculate = displayArea.innerHTML.split(currentOperator)
+  console.log(arrayToCalculate)
+
+  if (currentOperator === '+') {
+    const result = parseFloat(firstNumber) + parseFloat(arrayToCalculate[1])
+    displayArea.innerHTML = result
+  } else if (currentOperator === '-') {
+    const result = parseFloat(firstNumber) - parseFloat(arrayToCalculate[1])
+    displayArea.innerHTML = result
+  } else if (currentOperator === '÷') {
+    const result = parseFloat(firstNumber) / parseFloat(arrayToCalculate[1])
+    displayArea.innerHTML = result
+  } else if (currentOperator === 'x') {
+    const result = parseFloat(firstNumber) * parseFloat(arrayToCalculate[1])
+    displayArea.innerHTML = result
+  }
+
+})
+
+
 
 //get operation buttons to work
 operationButtons.forEach(button => {
   button.addEventListener('click', (e) => {
     firstNumber = displayArea.innerHTML
-    
-     console.log(firstNumber)
-    
+
+    console.log(firstNumber)
+
     displayArea.innerHTML += e.target.innerHTML
-  
+
 
   })
 
@@ -125,9 +120,28 @@ operationButtons.forEach(button => {
 //get delete button to work 
 
 deleteButton.addEventListener('click', (e) => {
-   displayArea.innerHTML = ' ';
+  displayArea.innerHTML = ' ';
 });
 
 
 
- 
+  
+
+
+decimalButton.addEventListener('click', () => {
+  operators.forEach((operator) => {
+    if (displayArea.innerHTML.includes(operator)) {
+      currentOperator = operator
+    }
+  })
+
+
+
+  const arrayToCalculate = displayArea.innerHTML.split(currentOperator)
+  console.log(arrayToCalculate)
+
+  if (arrayToCalculate[0].includes('.') && arrayToCalculate[1].includes('.')) {
+    decimalButton.disabled = true;
+  }
+
+ })
