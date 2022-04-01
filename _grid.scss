@@ -1,5 +1,5 @@
 .container {
-  max-width: 300px;
+  max-width: 400px;
   min-width: 300px;
  
  ///display area
@@ -17,7 +17,6 @@
    grid-template-columns: 1fr 1fr 1fr 1fr;
    width: 80%;
    margin: auto;
-   align-content: space-around;
    grid-gap: 1px;
    button {
      border-radius: 100px;
