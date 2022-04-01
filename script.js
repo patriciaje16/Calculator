@@ -21,9 +21,12 @@ const displayArea = document.querySelector('#calcDisplay')
 //decimal point
 const decimalButton = document.querySelector('#point')
 
+decimalButton.addEventListener('click', (e) => {
+  if (!(displayArea.innerHTML.includes('.'))) {
+    decimalButton.disabled = true;}
+  
 
-
-
+  })
 
 //percentage sign//
 const percentButton = document.querySelector('[data-percent]')
@@ -88,16 +91,16 @@ equalsButton.addEventListener('click', (e) => {
     console.log(arrayToCalculate)
 
   if (currentOperator === '+' ) {
-      const result = parseInt(firstNumber) + parseInt(arrayToCalculate[1]) 
+      const result = parseFloat(firstNumber) + parseFloat(arrayToCalculate[1]) 
       displayArea.innerHTML = result
     } else if (currentOperator === '-') {
-      const result = parseInt(firstNumber) - parseInt(arrayToCalculate[1]) 
+      const result = parseFloat(firstNumber) - parseFloat(arrayToCalculate[1]) 
       displayArea.innerHTML = result
     }else if (currentOperator === '÷') {
-      const result = parseInt(firstNumber) / parseInt(arrayToCalculate[1]) 
+      const result = parseFloat(firstNumber) / parseFloat(arrayToCalculate[1]) 
       displayArea.innerHTML = result
     }else if (currentOperator === 'x') {
-      const result = parseInt(firstNumber) * parseInt(arrayToCalculate[1]) 
+      const result = parseFloat(firstNumber) * parseFloat(arrayToCalculate[1]) 
       displayArea.innerHTML = result
     }
 
