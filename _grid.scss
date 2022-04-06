@@ -1,11 +1,13 @@
 .container {
-  max-width: 400px;
-  min-width: 300px;
+  max-width: 350px;
+  height: 400px;
+  border-radius: 50px;
  
  ///display area
  #calcDisplay {
    width: 40%;
    height: 5vh;
+   padding-top: 5vh ;
    padding-left: 1vh;
    float: left;
    
@@ -50,10 +52,9 @@
    "zero zero point equals";
    width: 80%;
    padding-top: 1vh;
-   padding-bottom: 10vh;
-   margin-right: 1vh; 
+   padding-bottom: 10vh; 
    margin: auto;
-   grid-gap: 1px;
+   
  
     button {
       border-radius: 100px;
@@ -65,10 +66,12 @@
       }
       #point {
         width: 5vh;
+        margin-right: 35px;
          
     }
     #equals {
       width: 5vh;
+      margin-right: 32px;
     }
  }
  }

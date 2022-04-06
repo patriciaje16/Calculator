@@ -1,10 +1,12 @@
 .container {
-  max-width: 400px;
-  min-width: 300px;
+  max-width: 350px;
+  height: 400px;
+  border-radius: 50px;
 }
 .container #calcDisplay {
   width: 40%;
   height: 5vh;
+  padding-top: 5vh;
   padding-left: 1vh;
   float: left;
 }
@@ -35,9 +37,7 @@
   width: 80%;
   padding-top: 1vh;
   padding-bottom: 10vh;
-  margin-right: 1vh;
   margin: auto;
-  grid-gap: 1px;
 }
 .container .bottomKeys button {
   border-radius: 100px;
@@ -48,9 +48,11 @@
 }
 .container .bottomKeys #point {
   width: 5vh;
+  margin-right: 35px;
 }
 .container .bottomKeys #equals {
   width: 5vh;
+  margin-right: 32px;
 }
 
 .container {

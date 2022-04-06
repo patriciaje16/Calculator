@@ -126,22 +126,22 @@ deleteButton.addEventListener('click', (e) => {
 
 
   
+////to disable the decimal button after you have completed your inputs///
+
+// decimalButton.addEventListener('click', () => {
+//   operators.forEach((operator) => {
+//     if (displayArea.innerHTML.includes(operator)) {
+//       currentOperator = operator
+//     }
+//   })
 
 
-decimalButton.addEventListener('click', () => {
-  operators.forEach((operator) => {
-    if (displayArea.innerHTML.includes(operator)) {
-      currentOperator = operator
-    }
-  })
 
+//   const arrayToCalculate = displayArea.innerHTML.split(currentOperator)
+//   console.log(arrayToCalculate)
 
+//   if (arrayToCalculate[0].includes('.') && arrayToCalculate[1].includes('.')) {
+//     decimalButton.disabled = true;
+//   }
 
-  const arrayToCalculate = displayArea.innerHTML.split(currentOperator)
-  console.log(arrayToCalculate)
-
-  if (arrayToCalculate[0].includes('.') && arrayToCalculate[1].includes('.')) {
-    decimalButton.disabled = true;
-  }
-
- })
+//  })
