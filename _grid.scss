@@ -2,80 +2,81 @@
   max-width: 350px;
   height: 400px;
   border-radius: 50px;
- 
- ///display area
- #calcDisplay {
-   width: 40%;
-   height: 5vh;
-   padding-top: 5vh ;
-   padding-left: 1vh;
-   float: left;
-   
- }
- 
- ////the main keys
- .calcKeys {
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr 1fr;
-   width: 80%;
-   margin: auto;
-   grid-gap: 1px;
-   button {
-     border-radius: 100px;
+
+  ///display area
+  #calcDisplay {
+    width: 40%;
+    height: 5vh;
+    padding-top: 5vh;
+    padding-left: 1vh;
+    float: left;
+
+  }
+
+  ////the main keys
+  .calcKeys {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 80%;
+    margin: auto;
+    grid-gap: 1px;
+
+    button {
+      border-radius: 100px;
       height: 6vh;
       width: 6vh;
-      
-   }
- 
- }
- ////grid variables
- #zero {
-   grid-area: zero;
-   
- }
- 
- #point {
-   grid-area: point;
-   
- }
- 
- #equals {
-   grid-area: equals;
-   
- }
- 
- 
- ///the bottom keys 
- .bottomKeys {
-   display: grid;
-   grid-template-areas:
-   "zero zero point equals";
-   width: 80%;
-   padding-top: 1vh;
-   padding-bottom: 10vh; 
-   margin: auto;
-   
- 
+
+    }
+
+  }
+
+  ////grid variables
+  #zero {
+    grid-area: zero;
+
+  }
+
+  #point {
+    grid-area: point;
+
+  }
+
+  #equals {
+    grid-area: equals;
+
+  }
+
+
+  ///the bottom keys 
+  .bottomKeys {
+    display: grid;
+    grid-template-areas:
+      "zero zero point equals";
+    width: 80%;
+    padding-top: 1vh;
+    padding-bottom: 10vh;
+    margin: auto;
+
+
     button {
       border-radius: 100px;
       height: 5vh;
     }
-      #zero {
-        width: 20vh;
-        
-      }
-      #point {
-        width: 5vh;
-        margin-right: 35px;
-         
+
+    #zero {
+      width: 20vh;
+
     }
+
+    #point {
+      width: 5vh;
+      margin-right: 35px;
+
+    }
+
     #equals {
       width: 5vh;
       margin-right: 32px;
     }
- }
- }
- 
-
- 
- 
+  }
+}

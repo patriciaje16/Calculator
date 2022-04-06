@@ -59,7 +59,7 @@ numberButton.forEach(button => {
 
     displayArea.innerHTML += e.target.innerHTML
 
-    
+
   })
 })
 
@@ -125,7 +125,7 @@ deleteButton.addEventListener('click', (e) => {
 
 
 
-  
+
 ////to disable the decimal button after you have completed your inputs///
 
 // decimalButton.addEventListener('click', () => {

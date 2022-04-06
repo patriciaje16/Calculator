@@ -154,9 +154,8 @@ describe("Application of other operator keys", () => {
     cy.get("[data-cy=nine]").click()
     //click %
     cy.get("[data-cy=percent]").click()
-    
+
     //assert
-    cy.get("[data-cy=calcScreen]").should("have.text", "0.09");
-    ;
+    cy.get("[data-cy=calcScreen]").should("have.text", "0.09");;
   })
 })
